@@ -2,7 +2,7 @@ From tomcat:latest
 
 MAINTAINER amina
 
-ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
+ADD ./target/	webapp.war /usr/local/tomcat/webapps/
 
 
 EXPOSE 8080
