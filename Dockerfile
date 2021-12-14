@@ -1,6 +1,12 @@
-From ubuntu:latest
+From tomcat:latest
+
 MAINTAINER amina
-RUN apt-get update \
-&& apt-get install -y vim git \
-&& apt-get clean \
-&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
+
+
+EXPOSE 8080
+
+CMD ["catalina.sh", "run"]
+
+
