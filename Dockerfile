@@ -1,4 +1,4 @@
-From tomcat:latest
+FROM tomcat:latest
 
 MAINTAINER amina
 
