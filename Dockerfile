@@ -2,7 +2,7 @@ From tomcat:latest
 
 MAINTAINER amina
 
-ADD /var/lib/jenkins/workspace/TP-DevOps/webapp/webapp.war /usr/local/tomcat/webapps/
+ADD /var/lib/jenkins/workspace/TP-DevOps/webapp/target/webapp.war /usr/local/tomcat/webapps/
 
 
 EXPOSE 8080
