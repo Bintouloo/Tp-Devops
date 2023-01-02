@@ -8,9 +8,9 @@ pipeline {
     {
        maven "Maven"
     } 
-   environment {
-    DOCKERHUB_CREDENTIALS=credentials('dockerhub')
-  }
+//    environment {
+//     DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+//   }
 
  stages {
       stage('clone') {
