@@ -28,38 +28,38 @@ pipeline {
           }
         }
 
-   stage('Docker Build') {
-           steps {
+//    stage('Docker Build') {
+//            steps {
               
 
-                sh 'docker build -t imagedevops:latest .' 
+//                 sh 'docker build -t imagedevops:latest .' 
 
-          }
-        }
-        stage('Run Docker container on Jenkins') {
+//           }
+//         }
+//         stage('Run Docker container on Jenkins') {
              
-            steps {
+//             steps {
                 
-                sh "docker run -d -p 8083:8080 --name contenairDevops imagedevops:latest"
+//                 sh "docker run -d -p 8083:8080 --name contenairDevops imagedevops:latest"
  
-            }
-        }
+//             }
+//         }
 
-      stage('envoie sur dockerhub') {
+//       stage('envoie sur dockerhub') {
              
-            steps {
-                sh "docker commit contenairDevops steevdev7/my-private-ripo"
+//             steps {
+//                 sh "docker commit contenairDevops steevdev7/my-private-ripo"
                 
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u steevdev7 --password-stdin'
+//                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u steevdev7 --password-stdin'
 
-                sh "docker push steevdev7/my-private-ripo:latest"
+//                 sh "docker push steevdev7/my-private-ripo:latest"
                 
-                sh'docker logout'
+//                 sh'docker logout'
                  
            
 
-       }
- }
+//        }
+//  }
      
  }
 }
